@@ -1,4 +1,4 @@
-﻿using DailySnacksBar.Models;
+﻿using DailySnacksBar.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
