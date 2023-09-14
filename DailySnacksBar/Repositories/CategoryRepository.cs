@@ -12,6 +12,6 @@ namespace DailySnacksBar.Repositories
         {
             _context = context;
         }
-        public IEnumerable<Category> categories => _context.Categories;
+        public IEnumerable<Category> Categories => _context.Categories;
     }
 }

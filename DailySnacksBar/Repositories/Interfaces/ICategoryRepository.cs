@@ -4,6 +4,6 @@ namespace DailySnacksBar.Repositories.Interfaces
 {
     public interface ICategoryRepository
     {
-        IEnumerable<Category> categories { get; }
+        IEnumerable<Category> Categories { get; }
     }
 }
