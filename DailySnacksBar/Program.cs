@@ -1,4 +1,6 @@
 using DailySnacksBar.Context;
+using DailySnacksBar.Repositories;
+using DailySnacksBar.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +11,9 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddDbContext<SnackBarDbContext>(options =>
 options.UseSqlServer(connectionString));
+
+builder.Services.AddTransient<ISnackRepository, SnackRepository>();
+builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 
 builder.Services.AddControllersWithViews();
 
