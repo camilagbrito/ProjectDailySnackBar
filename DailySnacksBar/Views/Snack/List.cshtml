@@ -6,12 +6,16 @@
 
 <h1>@ViewData["Title"]</h1>
 
-
-@foreach (var item in Model) {
-       
-    <div>
-        <h4>@item.Name</h4>
-        <p><img src="@item.ImgUrl"/></p>
-        <h3>Price: @item.Price.ToString("c")</h3>
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col col-md-4 col-lg-4">
+                <p><img src="@item.ImgUrl" class="img-fluid"/></p>
+                <h3>Price: @item.Price.ToString("c")</h3>
+                <h4>@item.Name</h4>
+                <p>@item.ShortDescription</p>
+            </div>
+        }
     </div>
-}
+</div>
