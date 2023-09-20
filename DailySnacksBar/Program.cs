@@ -1,4 +1,5 @@
 using DailySnacksBar.Context;
+using DailySnacksBar.Models;
 using DailySnacksBar.Repositories;
 using DailySnacksBar.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +16,7 @@ options.UseSqlServer(connectionString));
 builder.Services.AddTransient<ISnackRepository, SnackRepository>();
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped(x => ShoppingCart.GetShoppingCart(x));
 
 builder.Services.AddControllersWithViews();
 
