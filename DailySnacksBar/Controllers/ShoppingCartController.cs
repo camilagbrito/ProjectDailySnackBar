@@ -23,7 +23,7 @@ namespace DailySnacksBar.Controllers
 
             var shoppingCartVM = new ShoppingCartViewModel
             {
-                shoppingCart = _shoppingCart,
+                ShoppingCart = _shoppingCart,
                 ShoppingCartTotal = _shoppingCart.GetShoppingCartTotal()
             };
 

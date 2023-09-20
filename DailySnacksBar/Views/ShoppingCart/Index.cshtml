@@ -2,7 +2,7 @@
 
 <div class="Container">
     <div class="row">
-        <img src="~/images/full-cart-icon.png"/>
+        <img class="col-1" src="~/images/full-cart-icon.png"/>
         <div>
             <h4> Shopping Cart: </h4>
         </div>
@@ -18,20 +18,20 @@
             </thead>
 
             <tbody>
-                @foreach(var item in Model.shoppingCart.ShoppingCartItems)
+                @foreach(var item in Model.ShoppingCart.ShoppingCartItems)
                 {
                     <tr>
                         <td class="text-center"> @item.Quantity</td>
-                        <td class="text-center"> @item.Snack</td>
+                        <td class="text-start"> @item.Snack.Name</td>
                         <td class="text-end"> @item.Snack.Price.ToString("c")</td>
 
                         <td class="text-end">
                             @((item.Quantity * item.Snack.Price).ToString("c"))
                         </td>
+
                         <td class="text-center">
-                            <a asp-controller="ShoppingCard" asp-action="RemoveToShoppingCart"
-                           asp-route-Id="@item.Snack.Id">
-                                <img src="~/images/remove.ico" />
+                            <a asp-controller="ShoppingCart" asp-action="RemoveToShoppingCart"
+                                asp-route-Id="@item.Snack.Id"><img src="~/images/delete.png" />
                             </a>
                         </td>
                     </tr>
@@ -41,7 +41,7 @@
                 <tr>
                     <td colspan="3" class="text-end">Total:</td>
                     <td class="text-end">
-                        @Model.ShoppingCartTotal.ToString("c");
+                        @Model.ShoppingCartTotal.ToString("c")
                     </td>
                 </tr>
             </tfoot>

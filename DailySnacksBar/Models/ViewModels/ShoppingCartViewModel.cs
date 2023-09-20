@@ -2,7 +2,7 @@
 {
     public class ShoppingCartViewModel
     {
-        public ShoppingCart shoppingCart { get; set; }
+        public ShoppingCart ShoppingCart { get; set; }
         public decimal ShoppingCartTotal { get; set; }
 
     }
