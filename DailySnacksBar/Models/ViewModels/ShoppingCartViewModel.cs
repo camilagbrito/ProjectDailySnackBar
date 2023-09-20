@@ -1,6 +1,6 @@
 ﻿namespace DailySnacksBar.Models.ViewModels
 {
-    public class ShoppingCArtViewModel
+    public class ShoppingCartViewModel
     {
         public ShoppingCart shoppingCart { get; set; }
         public decimal ShoppingCartTotal { get; set; }
