@@ -2,9 +2,8 @@
 
 <div class="Container">
     <div class="row">
-        <img class="col-1" src="~/images/full-cart-icon.png"/>
         <div>
-            <h4> Shopping Cart: </h4>
+            <img src="~/images/Full-Cart-icon.png" width="30" height="35" /> <h4>Shopping Cart: </h4>
         </div>
 
         <table class="table-bordered table-striped">
@@ -31,7 +30,8 @@
 
                         <td class="text-center">
                             <a asp-controller="ShoppingCart" asp-action="RemoveToShoppingCart"
-                                asp-route-Id="@item.Snack.Id"><img src="~/images/delete.png" />
+                           asp-route-id="@item.Snack.Id">
+                                <img src="~/images/delete.png" width="10px" height="10px" />
                             </a>
                         </td>
                     </tr>
